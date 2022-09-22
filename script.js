@@ -50,8 +50,6 @@ const verifyRId = () =>{
   {
     document.getElementById('ref-id').style.color = "#2FAB00";
     document.getElementById('ref-id').innerHTML = "Referral ID Verified ✅";
-    document.getElementById('ref-ids').style.color = "#2FAB00";
-    document.getElementById('ref-ids').innerHTML = "Referral ID Verified ✅";
     document.getElementById('referral-name').value = ReferralNames[i];
     document.getElementById('referral-name').style.color = "#2FAB00";
     ReferralCodeError++;
@@ -59,11 +57,9 @@ const verifyRId = () =>{
   }
 }
 if(ReferralCodeError === 0){
-  document.getElementById('referral-name').value = null;
+  document.getElementById('referral-name').value = "Empty";
   document.getElementById('ref-id').innerHTML = "Wrong Referral ID ❌";
   document.getElementById('ref-id').style.color = "#DF0713";
-  document.getElementById('ref-ids').innerHTML = "Wrong Referral ID ❌";
-  document.getElementById('ref-ids').style.color = "#DF0713";
 }
 }
 

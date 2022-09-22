@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="shortcut icon" href="images/SenFlex_Logo.png" type="image"> -->
+    <title>IES || Innovative Electronic Society</title>
+</head>
+
+<body>
+
+    <!-- ----------Background Circles Start-------- -->
+    <div class="bg-circles">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+    </div>
+    <!-- -----------Background Circles End--------- -->
+    <main>
+
+        <div class="wrap">
+
+            <!-- Header  -->
+            <header>
+                <div class="container" id="myHeader">
+
+                    <!-- ------------------- Logo Area -------------- -->
+                    <div class="logo">
+                        <!-- mg src="images/SenFlex_Logo.png" draggable="false"> -->
+                        <h2 onclick="show('home');">IES</h2>
+                    </div>
+
+                    <!-- ---------- navBar Links ---------------- -->
+                    <div class="links">
+                        <ul>
+                            <li><a href="#" onclick="show('home'); toggle();">Home</a></li>
+                            <li><a href="#" aria-disabled="true" onclick="toggle();">Projects</a></li>
+                            <li><a href="#" aria-disabled="true" onclick="toggle();">Events</a></li>
+                            <li><a href="#" onclick="toggle();">Be a Member</a></li>
+                            <li><a href="#" aria-disabled="true" onclick="toggle();">About Us</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="overlay"></div>
+
+                    <div class="toggle-navbar" onclick="toggle();">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Home Section -->
+            <section class="main-component" id="home">
+                <div class="container">
+
+                    <div class="left-side">
+                        <div class="title">
+                            <h1>Join with IES KGP</h1>
+                            <h4>Slogan for joining page</h4>
+                        </div>
+                        <p>IES stands for Innovative Electronic Society where we'll work on software, hardware and a lot
+                            of innovative things.</p>
+                    </div>
+
+                    <div class="right-side">
+                        <div class="web-links">
+                            <h2>You are a..</h2>
+                            <a href="#" class="web-btn" onclick="show('college');">College Student</a>
+                            <a href="#" class="web-btn" onclick="show('school');" aria-disabled="true">School Student</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--  College Students Section -->
+            <section class="main-component" id="college" style="display: none;">
+                <div class="container">
+
+                    <div class="right-side">
+                        <div class="web-links">
+                            <h2 style="margin-bottom: 20px;">Fill this form to Become a Member</h2>
+                            <form name="JoinCollege">
+                                
+                                <div class="form-design">
+                                    <input type="text" name="Name" placeholder="Name* (required)" required>
+                                    <input type="number" name="Number" placeholder="Mobile Number* (required)" required>
+                                    <input type="email" name="Email" placeholder="Email* (required)" required>
+                                    <select name="Gender">
+                                        <option value="" selected disabled>---Select Gender---</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                      </select>
+                                </div>
+                                <input type="text" name="Address" placeholder="Address* (required)" style="height: 65px;" required>
+                                <input type="text" name="Referral_ID" id="r-id" placeholder="Referral ID* (required)" required>
+                                <div class="form-design">
+                                    <label id="ref-id" style="display: flex; align-items:center;justify-content:center; height: 20px;"></label>
+                                   <a onclick="verifyRId();" style="margin-top: 5px;">Verify Referral ID</a>
+                                </div>
+
+                                <input type="text" name="Referral_Name" id="referral-name" placeholder="Referral Name* (required)" required>
+
+                                <div class="form-design">
+                                    <input type="text" name="College_Name" placeholder="College Name* (required)" required>
+                                    <input type="text" name="Department_Name" placeholder="Department Name* (required)" required>
+                                </div>
+
+                                <div class="form-design">
+                                    <input type="text" name="Semester" placeholder="Semester* (required)" required>
+                                    <input type="text" name="College_ID" placeholder="College Id Number (optional)">
+                                </div>
+
+                                <div class="form-design">
+                                    <input type="text" name="Blood_Group" placeholder="Blood Group (optional)">
+                                    <input type="text" name="Skills" placeholder="Skills (If Any)">
+                                    <input type="text" name="Interest" placeholder="Interest">
+                                    <a href="https://rb-pay-payment.vercel.app/pay/deayan@fbl?am=49" target="_blank" onclick="paymentRef();"> Pay Joining Fees ₹49</a>
+                                </div>
+                                 <div id="payment-ref">
+                                    <span style="size: 5px;text-align: center;">(Optional cash or online)<br>If you already paid enter Reference no</span>
+                                    <input type="text" name="Payment_ID" placeholder="If you already paid enter Reference no">
+                                 </div>
+                                 <button type="submit" name="submit" value="Submit" id="disable"  onclick="buttonDis();" style="margin-top: 20px;">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- School Students Section -->
+            <section class="main-component" id="school" style="display: none;">
+                <div class="container">
+
+                    <div class="right-side">
+                        <div class="web-links">
+                            <h3 style="margin-bottom: 20px;">Not Avilable for School Students</h3>
+
+
+
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <p>©IES - Innovative Electronic Society 2022, All Rights Reserved.</p>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
